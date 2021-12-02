@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NYC_Green", "NYC_Green\NYC_Green.vcxproj", "{9CBB74EE-8FB4-4287-8175-30F5A3765D64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CBB74EE-8FB4-4287-8175-30F5A3765D64}.Debug|x64.ActiveCfg = Debug|x64
+		{9CBB74EE-8FB4-4287-8175-30F5A3765D64}.Debug|x64.Build.0 = Debug|x64
+		{9CBB74EE-8FB4-4287-8175-30F5A3765D64}.Release|x64.ActiveCfg = Release|x64
+		{9CBB74EE-8FB4-4287-8175-30F5A3765D64}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AE43B37-AC0B-48A9-9414-F14A614D72C6}
+	EndGlobalSection
+EndGlobal
