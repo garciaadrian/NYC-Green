@@ -29,10 +29,10 @@
     <QtUic Include="nyc_green.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="nyc_green.h">
+    <QtMoc Include="nyc_green_view.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="nyc_green.cpp">
+    <ClCompile Include="nyc_green_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -40,5 +40,13 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="nyc_green_model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nyc_green_model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
-#include "nyc_green.h"
+#include "nyc_green_view.h"
 #include <QtWidgets/QApplication>
-#include <qlabel.h>
+#include <QtWidgets/QMainWindow>
 
 int main(int argc, char *argv[])
 {

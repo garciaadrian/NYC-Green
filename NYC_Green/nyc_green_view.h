@@ -10,6 +10,11 @@ class NYC_Green : public QMainWindow
 public:
     NYC_Green(QWidget *parent = Q_NULLPTR);
 
+public slots:
+    void onSubmit();
+    void onWattSlider();
+    void onSpaceSlider();
+
 private:
     Ui::NYC_GreenClass ui;
 };
