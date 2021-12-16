@@ -4,7 +4,7 @@
 NRELRequest::NRELRequest(std::wstring base_uri, std::wstring query) {
 	client = std::make_unique<http_client>(base_uri);
     builder = std::make_unique<uri_builder>(query);
-    append_query(U("api_key"), U(NREL_API_TOKEN));
+    append_query(U("api_key"), U(NREL_API_TOKEN)); //
 
 }
 

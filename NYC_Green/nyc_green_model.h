@@ -59,7 +59,7 @@ protected:
 };
 
 /**
-* Interface to NREL's weather data API
+* Interface to NREL's weather data & utility rate API
 */
 class NRELRequest : public NetworkRequest {
 public:

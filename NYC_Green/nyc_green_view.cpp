@@ -29,11 +29,23 @@ void NYC_Green::onSpaceSlider() {
     ui.space_label->setText(text);
 }
 
+void NYC_Green::onAbout() {
+    std::wstring attributions = L"© 2018 Mapbox and its suppliers. All rights reserved. Use of this data is subject to the Mapbox Terms of Service.";
+    QMessageBox msg;
+    msg.setText("Attributions");
+    msg.setInformativeText(QString::fromStdWString(attributions));
+    msg.setStandardButtons(QMessageBox::Ok);
+    msg.setDefaultButton(QMessageBox::Abort);
+    msg.setIcon(QMessageBox::Information);
+    int ret2 = msg.exec();
+}
+
 NYC_Green::NYC_Green(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
     ui.watt_slider->setTracking(true);
+    connect(this->ui.button_about, SIGNAL(clicked()), this, SLOT(onAbout()));
     connect(this->ui.submitButton, SIGNAL(clicked()), this, SLOT(onSubmit()));
     connect(this->ui.watt_slider, SIGNAL(valueChanged(int)), this, SLOT(onWattSlider()));
     connect(this->ui.space_slider, SIGNAL(valueChanged(int)), this, SLOT(onSpaceSlider()));
@@ -143,8 +155,8 @@ void NYC_Green::onSubmit() {
         float kilowatt_hour_annual = ((ui.watt_slider->value() * (ui.space_slider->value() / 17.55) * annual_ghi) / 1000) * 365;
         float savings = kilowatt_hour_annual * utility_rate;
         output += "ANNUAL kWh: "; output += QString::number(kilowatt_hour_annual);
-        output += "\nSAVINGS PER YEAR:"; output += QString::number(savings);
-        ui.log_output->appendPlainText(output);
+        output += "\nSAVINGS PER YEAR: $"; output += QString::number(savings);
+        ui.log_output->setPlainText(output);
     }
     catch (const std::exception& e) {
         qWarning() << e.what();

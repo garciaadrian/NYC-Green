@@ -14,6 +14,7 @@ public slots:
     void onSubmit();
     void onWattSlider();
     void onSpaceSlider();
+    void onAbout();
 
 private:
     Ui::NYC_GreenClass ui;
